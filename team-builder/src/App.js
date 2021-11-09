@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import PersonForm from "./components/PersonForm";
 
 const initialFormValues = {
   username: "",
@@ -28,6 +29,7 @@ function App() {
   return (
     <div className='App'>
       <h1>Team Builder Form</h1>
+      <PersonForm values={formValues} update={updateForm} submit={submitForm} />
     </div>
   );
 }
