@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import PersonForm from "./components/PersonForm";
+import Person from "./components/Person";
 
 const initialFormValues = {
   username: "",
@@ -30,6 +31,9 @@ function App() {
     <div className='App'>
       <h1>Team Builder Form</h1>
       <PersonForm values={formValues} update={updateForm} submit={submitForm} />
+      {person.map((person) => {
+        return <Person key={person.id} details={person} />;
+      })}
     </div>
   );
 }
