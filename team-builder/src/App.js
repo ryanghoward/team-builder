@@ -8,9 +8,26 @@ const initialFormValues = {
 };
 
 function App() {
+  const [person, setPerson] = useState([]);
+  const [formValues, setFormValues] = useState(initialFormValues);
+
+  const updateForm = (input1, input2) => {
+    setFormValues({ ...formValues, [input1]: input2 });
+  };
+
+  const submitForm = (e) => {
+    const newPerson = {
+      username: formValues.username.trim(),
+      email: formValues.email.trim(),
+      role: formValues.role,
+    };
+    setPerson(person.concat(newPerson));
+    setFormValues(initialFormValues);
+  };
+
   return (
     <div className='App'>
-      <h1>Hello bitch!</h1>
+      <h1>Team Builder Form</h1>
     </div>
   );
 }
