@@ -37,6 +37,17 @@ export default function PersonForm(props) {
             placeholder='Enter your Email'
           />
         </label>
+        <label>
+          Role:
+          <select name='role' value={values.role} onChange={onChange}>
+            <option value=''>Select a role</option>
+            <option value='Dumbass'>Dumbass</option>
+            <option value='Shithead'>Shithead</option>
+            <option value='Retard'>Retard</option>
+            <option value='Dumbfuck'>Dumbfuck</option>
+            <option value='Idiot'>Idiot</option>
+          </select>
+        </label>
       </div>
     </form>
   );
