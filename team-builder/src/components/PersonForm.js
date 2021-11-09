@@ -27,6 +27,16 @@ export default function PersonForm(props) {
             placeholder='Enter a Username'
           />
         </label>
+        <label>
+          Email:
+          <input
+            type='email'
+            name='email'
+            value={values.email}
+            onChange={onChange}
+            placeholder='Enter your Email'
+          />
+        </label>
       </div>
     </form>
   );
