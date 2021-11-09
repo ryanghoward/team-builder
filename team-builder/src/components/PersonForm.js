@@ -40,7 +40,7 @@ export default function PersonForm(props) {
         <label>
           Role:
           <select name='role' value={values.role} onChange={onChange}>
-            <option value=''>Select a role</option>
+            <option value=''>----Select a Role----</option>
             <option value='Dumbass'>Dumbass</option>
             <option value='Shithead'>Shithead</option>
             <option value='Retard'>Retard</option>
@@ -48,6 +48,9 @@ export default function PersonForm(props) {
             <option value='Idiot'>Idiot</option>
           </select>
         </label>
+        <div className='submit'>
+          <button>SUBMIT</button>
+        </div>
       </div>
     </form>
   );
