@@ -3,10 +3,6 @@ import React from "react";
 function Person(props) {
   const { details } = props;
 
-  if (!details) {
-    return <h1>THIS IS WORKING</h1>;
-  }
-
   return (
     <div className='personContainer'>
       <h2>{details.username}</h2>

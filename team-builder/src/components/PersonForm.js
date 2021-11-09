@@ -49,7 +49,9 @@ export default function PersonForm(props) {
           </select>
         </label>
         <div className='submit'>
-          <button>SUBMIT</button>
+          <button disabled={!values.username || !values.email || !values.role}>
+            SUBMIT
+          </button>
         </div>
       </div>
     </form>
